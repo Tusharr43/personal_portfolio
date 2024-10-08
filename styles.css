@@ -1,0 +1,1367 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(15, 3, 49);
+    color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #170127;
+    color: white;
+}
+
+.left {
+    font-size: 24px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+}
+
+#nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#nav-links li {
+    margin: 0 15px;
+}
+
+#nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+#nav-links a:hover {
+    color: #ddd;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #250642;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    #nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .left {
+        font-size: 20px;
+    }
+
+    #nav-links li {
+        margin: 10px 0;
+    }
+}
+
+/* Main Content Separator */
+main hr {
+    border: 0;
+    background: blueviolet;
+    height: 1.2px;
+    margin: 40px 84px;
+}
+
+/* First Section Styles */
+.firstsection {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    height: 600px;
+    background-color: rgb(0, 0, 5);
+    min-height: 80vh;
+    backdrop-filter: blur(10px);
+}
+
+.firstsection .leftsection {
+    font-size: 3rem;
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 100px;
+    flex-wrap: wrap;
+}
+
+.rightsection {
+    width: 40%;
+}
+
+.rightsection img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.purple {
+    color: blueviolet;
+}
+
+#element {
+    color: blueviolet;
+}
+
+/* Second Section Styles */
+.secondsection {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 100vw;
+    opacity: 1;
+    transition: opacity 0.8s ease;
+}
+
+.aboutme-container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    background-color: rgba(27, 6, 69, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+.aboutme {
+    display: flex;
+    width: 100%;
+}
+
+.aboutme div {
+    flex: 1;
+    padding: 10px;
+}
+
+.aboutme h1 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+.aboutme p {
+    font-size: 1.1rem;
+}
+
+/* Make the right section disappear on small screens */
+@media only screen and (max-width: 768px) {
+    .aboutme-container {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .aboutme {
+        flex-direction: column;
+    }
+
+    .aboutme h1 {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .aboutme p {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .aboutme div.rightsection {
+        display: none;
+    }
+}
+
+:root {
+    --main-bg-color: #410561;
+    --card-bg-color: rgb(27, 6, 69);
+    --hover-color: blueviolet;
+    --text-color: aliceblue;
+    --card-shadow: 5px 5px 30px rgb(143, 82, 186);
+}
+
+body {
+    color: var(--text-color);
+}
+.button-container {
+    text-align: center; /* Center the button */
+    margin-top: 20px; /* Add some space above the button */
+    margin-left:50px ;
+}
+
+.resume-button {
+    display: inline-block; /* Makes the anchor behave like a button */
+    padding: 10px 20px; /* Add padding */
+    background-color: blueviolet; /* Background color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.3s ease; /* Transition effect */
+}
+
+.resume-button:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Shadow effect on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+
+
+/* Main Content Separator */
+main hr {
+    border: 0;
+    background: blueviolet;
+    height: 1.2px;
+    margin: 40px 84px;
+}
+
+/* First Section Styles */
+.firstsection {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    height: 600px;
+    background-color: rgb(0, 0, 5);
+    min-height: 80vh;
+    backdrop-filter: blur(10px);
+}
+
+.firstsection .leftsection {
+    font-size: 3rem;
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 100px;
+    flex-wrap: wrap;
+}
+
+.rightsection {
+    width: 40%;
+}
+
+.rightsection img {
+    width: 80%;
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+/* Text Color */
+.purple {
+    color: blueviolet;
+}
+
+#element {
+    color: blueviolet;
+}
+
+/* Second Section Styles */
+.secondsection {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    width: 100vw;
+    text-align: left;
+    opacity: 1;
+    transition: opacity 0.8s ease;
+}
+
+.aboutme {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 40vh;
+    opacity: 1;
+    transition: opacity 0.8s ease;
+    text-align: left;
+    /* Ensure left alignment */
+}
+
+.aboutme div {
+    width: 48%;
+    /* Equal spacing */
+    padding: 0 10px;
+}
+
+.aboutme h1 {
+    margin-top: 10%;
+    margin-left: 20%;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: left;
+    /* Left align heading */
+}
+
+.aboutme p {
+    margin-left: 20%;
+    font-size: 1.1rem;
+    text-align: left;
+    /* Left align paragraph text */
+}
+
+/* Responsive Styling for Mobile */
+@media only screen and (max-width: 768px) {
+
+    /* Stack navigation items vertically */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    /* Make sections stack vertically */
+    .firstsection,
+    .aboutme {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .firstsection .leftsection,
+    .rightsection {
+        width: 80%;
+        margin: 20px 0;
+        padding: 0;
+    }
+
+    .firstsection .leftsection {
+        font-size: 2rem;
+    }
+
+    /* Adjust margins and paddings for smaller screens */
+    main hr {
+        margin: 20px 20px;
+    }
+
+    /* Adjust second section for mobile */
+    .secondsection {
+        flex-direction: column;
+        height: auto;
+        text-align: left;
+        /* Ensure left alignment */
+    }
+
+    .aboutme {
+        align-items: flex-start;
+        text-align: left;
+        /* Ensure left alignment on mobile */
+    }
+
+    .aboutme div {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .aboutme h1,
+    .aboutme p {
+        text-align: left;
+        /* Force left alignment */
+    }
+
+    .aboutme h1 {
+        font-size: 2rem;
+    }
+
+    .aboutme p {
+        font-size: 1rem;
+    }
+
+    /* Make images responsive */
+    .rightsection img,
+    .secondsection .rightsection img {
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+:root {
+    --main-bg-color: #410561;
+    --card-bg-color: rgb(27, 6, 69);
+    --hover-color: blueviolet;
+    --text-color: aliceblue;
+    --card-shadow: 5px 5px 30px rgb(143, 82, 186);
+}
+
+body {
+    color: var(--text-color);
+}
+
+/* Swiper Styles */
+
+/* Swiper Styles */
+.swiper {
+    min-height: 100vh;
+    width: 100%;
+    height: 35em;
+    background-color: #410561;
+    padding: 0;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.8s ease;
+    max-width: 100vw;  /* Ensure it doesn't exceed the viewport width */
+    max-height: 100vh; /* Ensure it doesn't exceed the viewport height */
+    overflow: hidden;   /* Prevent overflow */
+}
+
+.swiper.hidden {
+    opacity: 0;
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;  /* Maintain slide width */
+    transition: transform 0.3s ease;
+}
+
+.card {
+    width: 25em;   /* Maintain card width */
+    height: auto;  /* Auto height to adjust to content */
+    max-width: 90vw;  /* Make card width responsive */
+    max-height: 35em; /* Set a max height for the cards */
+    background-color: rgb(27, 6, 69);
+    border-radius: 2em;
+    box-shadow: 0 0 2em rgba(97, 5, 123, 0.2);
+    padding: 2em 1em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 0.5em;
+}
+
+.swiper .card {
+    box-shadow: 5px 5px 30px rgb(143, 82, 186);
+}
+
+.card-img {
+    width: 10em;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 1em;
+}
+
+.swiper .card-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 5px 5px 30px rgb(143, 82, 186);
+}
+
+.swiper-slide:not(.swiper-slide-active) {
+    filter: blur(1px);
+}
+
+/* Card Content */
+.card_content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card_title {
+    font-size: 1.5em;
+    font-weight: 500;
+    position: relative;
+    top: 0.2em;
+}
+
+.card_name {
+    color: rgb(112, 27, 197);
+}
+
+.card_text {
+    text-align: center;
+    font-size: 1.1em;
+    margin: 1em 0;
+}
+
+
+
+/* Skills Section */
+#skills {
+    text-align: center;
+    padding: 80px 0;
+}
+
+#skills h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: rgb(244, 248, 249);
+    font-weight: 500;
+    transition: color 0.3s, font-size 0.3s;
+}
+
+#skills h1:hover {
+    color: blueviolet;
+    font-size: 2.2rem;
+}
+
+/* Filter Buttons */
+.filter_buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter_buttons button {
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 5px 5px 30px rgb(143, 82, 186);
+}
+
+.filter_buttons button:hover {
+    color: blueviolet;
+    background-color: aliceblue;
+    font-size: 1.4em;
+    box-shadow: 5px 5px 30px rgb(143, 82, 186);
+}
+
+.filter_buttons button.active {
+    background: #350b67;
+    color: aliceblue;
+}
+
+/* Filterable Cards */
+.filterable_cards {
+    display: flex;
+    margin-top: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.personalprojects .filterable_cards {
+    margin-left: 10%;
+}
+
+.filterable_cards.card {
+    flex-basis: 300px;
+}
+
+.filterable_cards .card img {
+    width: 100%;
+    height: 210px;
+    border-radius: 10px 8px 0 0;
+    box-shadow: 0 0 30px blueviolet;
+}
+
+.filterable_cards .card-body {
+    padding: 4px 4px 6px;
+}
+
+.filterable_cards .card_title {
+    font-size: 18px;
+    font-weight: 500;
+    color: aliceblue;
+}
+
+.filterable_cards .card_text {
+    font-size: 13px;
+    font-weight: 500;
+    color: aliceblue;
+}
+
+.filterable_cards p {
+    color: aliceblue;
+    align-items: center;
+    padding: 10px 5px;
+}
+
+.filterable_cards p:hover {
+    color: blueviolet;
+    background-color: transparent;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.personalprojects h1 {
+    margin-bottom: 40px;
+    margin-left: 45%;
+    font-size: 2em;
+    font-weight: 500;
+    position: relative;
+    top: 0.2em;
+}
+
+.filter_buttons {
+    margin-left: 25%;
+    margin-bottom: 40px;
+} 
+
+.personalprojects h1:hover {
+    color: blueviolet;
+    background-color: transparent;
+    font-size: 2.2em;
+}  
+.education {
+    min-height: 100vh;
+    background-color: #410561;
+
+}
+
+.education .filterable_cards {
+    margin-left: 5%;
+    margin-top: 10%;
+}
+
+.education h1 {
+    margin-bottom: 40px;
+    margin-left: 42%;
+    font-size: 2em;
+    font-weight: 500;
+    position: relative;
+    top: 2em;
+    opacity: 1;
+    transition: opacity 0.8s ease;
+    flex-wrap: wrap;
+}
+
+.education h1:hover {
+    color: blueviolet;
+    background-color: transparent;
+    font-size: 2.2em;
+}
+
+
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.swiper.appear,
+.secondsection.appear .education.appear,
+.personalprojects .filterable_cards.appear .firstsection.appear {
+    animation: appear 10s ease forwards;
+    /* Adjust duration to 1s and change to ease */
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    animation-delay: 0.5s;
+    /* Delay the start of the animation */
+}
+
+.hidden {
+    opacity: 0;
+    /* Apply to fade out */
+}
+
+
+
+.education .filterable_cards img {
+    border-radius: 70%;
+    width: 70%;
+}
+
+.myexperience .filterable_cards img {
+    border-radius: 70%;
+    width: 60%;
+}
+
+.aboutme {
+    height: 90vh;
+    width: 100%;
+    background-color: #0f0845b3;
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 0;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.filterable_cards,
+.card {
+    animation: appear linear;
+    /* Adjust duration to 1s and change to ease */
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    /* Delay the start of the animation */
+
+}
+
+.contact-container h1:hover {
+    color: rgba(234, 103, 147, 0.817);
+    background-color: transparent;
+    /* Change background on hover */
+    font-size: 2.5em;
+
+}
+
+/* Social links styles */
+.social-links {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    /* Distance from the left edge */
+    transform: translateY(-50%);
+    /* Centers the links vertically */
+    display: flex;
+    flex-direction: column;
+    /* Aligns the icons vertically */
+    gap: 20px;
+    /* Space between icons */
+}
+
+.social-links a {
+    display: inline-block;
+}
+
+.social-links img {
+    flex: auto;
+    width: 60px;
+    /* Adjust size of icons */
+    height: 60px;
+    transition: transform 0.3s ease;
+    /* Animation on hover */
+    flex-wrap: wrap;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+    /* Slight zoom effect on hover */
+}
+
+/* Styles for the h1 */
+.contact-container h1 {
+    color: rgba(234, 103, 147, 0.817);
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
+.contact-container h1:hover {
+    color: rgba(234, 103, 147, 0.9);
+    font-size: 2.5em;
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+/* Contact container styles */
+.contact-container {
+    background-image: url('pics/contact.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding-top: 60px;
+}
+
+/* Contact form styles */
+.contact-left {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+}
+
+/* Additional form input and button styles */
+.contact-left h2 {
+    margin-bottom: 10px;
+    color: rgba(234, 103, 147, 0.817);
+}
+
+.contact-left hr {
+    width: 50%;
+    margin: 10px 0;
+}
+
+.contact-inputs {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #010312;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea.contact-inputs {
+    height: 150px;
+}
+
+.submit-btn {
+    background-color: #75a9f8;
+    color: rgb(27, 3, 3);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: rgba(234, 103, 147, 0.817);
+}
+footer {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(135deg, blue 50%, rgb(3, 57, 108) 50%);
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows items to wrap for small screens */
+    overflow: hidden; /* Hide the animated wave overflow */
+    animation: wave 5s ease-in-out infinite; /* Apply the wave animation */
+}
+
+/* Wavy Background Animation */
+@keyframes wave {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 1000px 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* Socio Icons */
+.socio-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.socio-icons li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.socio-icons li a {
+    font-size: 2rem;
+    color: azure;
+    transition: 0.5s;
+}
+
+.socio-icons li a:hover {
+    color: rgb(3, 0, 3); /* Hover effect */
+}
+
+/* Menu Links */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8%; /* Adjust margin for alignment */
+    padding: 0;
+}
+
+.menu li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.menu li a {
+    color: azure;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.menu li a:hover {
+    color: rgb(12, 1, 1); /* Hover effect */
+}
+
+/* Contact Info */
+.contact-info {
+    color: azure;
+    text-align: left; /* Align text to the left */
+    flex: 1; /* Takes up available space to the left */
+    margin-left: 10%; /* Align fully to the left */
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: azure;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: rgb(9, 0, 0); /* Hover effect */
+}
+
+/* Adjust footer layout for small screens */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center align text */
+        padding: 20px 15px; /* Adjust padding for small screens */
+    }
+
+    .contact-info {
+        text-align: center; /* Center align contact info */
+        margin-left: 0; /* Remove left margin */
+        margin-top: 10px; /* Add top margin for spacing */
+        width: 100%; /* Make sure it takes full width */
+    }
+
+    .menu {
+        margin-top: 20px; /* Add top margin for spacing */
+        margin-left: 0; /* Remove left margin */
+        justify-content: center; /* Center align menu items */
+        flex-wrap: wrap; /* Allow menu items to wrap */
+        width: 100%; /* Make sure it takes full width */
+    }
+
+    .menu li {
+        margin: 5px 0; /* Stack menu items with vertical spacing */
+    }
+
+    .socio-icons li {
+        margin: 5px 0; /* Stack icons with vertical spacing */
+    }
+
+    /* Ensure icons are responsive */
+    .socio-icons li a {
+        font-size: 1.5rem; /* Slightly smaller for small screens */
+    }
+}
+
+
+.personalprojects .filterable_cards .card {
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+    background-color: #120c41;
+    /* Dark background color */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Initial shadow */
+    text-align: center;
+    padding: 10px;
+}
+
+/* Hover effect for the card */
+.personalprojects .filterable_cards .card:hover {
+    transform: scale(1.05);
+    /* Slight scale up on hover */
+    background-color: #2e229ab5;
+    /* Lighter background on hover */
+    box-shadow: 0 8px 16px rgb(170, 93, 217);
+    /* Larger shadow on hover */
+}
+
+
+.filterable_cards .card_title {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.filterable_cards .card_text {
+    color: #666;
+    margin-top: 5px;
+}
+
+.personalprojects {
+    background-image: url('pics/personalpro.jpg');
+    /* Path to your background image */
+    background-size: cover;
+    /* Ensures the image covers the entire section */
+    background-position: center;
+    /* Centers the background image */
+    background-repeat: no-repeat;
+    /* Prevents repeating the image */
+    padding: 50px 0;
+    /* Adds padding to the section */
+    color: white;
+    /* Sets text color to white for contrast */
+}
+
+/* Base styles for the cards */
+.swiper .card {
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    /* Text color for better contrast */
+    text-align: center;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgb(247, 246, 246);
+    /* Card shadow */
+}
+
+/* Different colors for each card using nth-child */
+.swiper .card:nth-child(1) {
+    background-color: #FF5733;
+    /* Red-Orange */
+}
+
+.swiper .card:nth-child(2) {
+    background-color: #28B463;
+    /* Green */
+}
+
+.swiper .card:nth-child(3) {
+    background-color: #3498DB;
+    /* Blue */
+}
+
+.swiper .card:nth-child(4) {
+    background-color: #9B59B6;
+    /* Purple */
+}
+
+/* Optional hover effect for each card */
+.swiper .card:hover {
+    transform: scale(1.05);
+    /* Slight scale on hover */
+    box-shadow: 0 8px 16px rgba(235, 233, 233, 0.997);
+    /* Increase shadow on hover */
+}
+
+.swiper {
+    background-image: url('pics/skillsoo.jpg');
+    /* Path to your background image */
+    background-size: cover;
+    /* Ensures the image covers the entire section */
+    background-position: center;
+    /* Centers the background image */
+    background-repeat: no-repeat;
+    /* Prevents repeating the image */
+    padding: 50px 0;
+    /* Adds padding to the section */
+    color: white;
+
+}
+
+/* General styling for all cards */
+
+/* 1st card (My Personal Portfolio) */
+.personalprojects .filterable_cards .card-body:nth-child(1) .card {
+    background-color: #bd208c;
+    /* Red-Orange */
+}
+
+/* 2nd card (Personalised News Scraper) */
+.personalprojects .filterable_cards .card-body:nth-child(2) .card {
+    background-color: #3498DB;
+    /* Blue */
+}
+
+/* 3rd card (Hospital Appointment) */
+.personalprojects .filterable_cards .card-body:nth-child(3) .card {
+    background-color: #2ECC71;
+    /* Green */
+}
+
+/* 4th card (Predict AQI) */
+.personalprojects .filterable_cards .card-body:nth-child(4) .card {
+    background-color: #F39C12;
+    /* Orange */
+}
+
+/* 5th card (Instagram Spam Report) */
+.personalprojects .filterable_cards .card-body:nth-child(5) .card {
+    background-color: #9B59B6;
+    /* Purple */
+}
+
+
+
+.personalprojects .card p {
+    color: rgb(253, 253, 253);
+    /* Set paragraph text to red */
+}
+
+.education {
+
+    background-image: url('pics/cool.jpg');
+    /* Path to your background image */
+    background-size: cover;
+    /* Ensures the image covers the entire section */
+    background-position: center;
+    /* Centers the background image */
+    background-repeat: no-repeat;
+    /* Prevents repeating the image */
+    padding: 50px 0;
+    /* Adds padding to the section */
+    color: white;
+    /* Sets text color to white for contrast */
+}
+
+/* General styling for all cards */
+.education .card {
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    margin: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+/* 1st card (High School) */
+.education .filterable_cards .card-body:nth-child(1) .card {
+    background-color: #FF5733;
+    /* Red-Orange */
+}
+
+/* 2nd card (Intermediate School) */
+.education .filterable_cards .card-body:nth-child(2) .card {
+    background-color: #3498DB;
+    /* Blue */
+}
+
+/* 3rd card (Bachelor's Degree) */
+.education .filterable_cards .card-body:nth-child(3) .card {
+    background-color: #2ECC71;
+    /* Green */
+}
+
+/* Hover effect for all cards */
+.education .filterable_cards .card:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 8px 10px rgba(114, 2, 225, 0.993);
+}
+
+
+/* Responsive Design for Phone Screens */
+@media (max-width: 768px) {
+    .education .card {
+        padding: 15px;
+        margin: 10px;
+        font-size: 14px;
+    }
+
+    .education .filterable_cards {
+        display: flex;
+        flex-direction: column;
+        /* Stack cards vertically */
+    }
+
+    .education .card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .education h1 {
+        font-size: 24px;
+    }
+
+    .education .card h6 {
+        font-size: 16px;
+    }
+
+    .education .card p {
+        font-size: 14px;
+    }
+}
+
+/* Center the entire section on the screen */
+.myexperience {
+    background-image: url('pics/exp.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    /* Enables flexbox layout */
+    flex-direction: column;
+    /* Stack items vertically */
+    justify-content: center;
+    /* Center items vertically */
+    align-items: center;
+    /* Center items horizontally */
+    min-height: 100vh;
+    /* Ensures it takes the full viewport height */
+    padding: 20px;
+    /* Add padding around the section */
+}
+
+/* Center the title */
+.myexperience h1 {
+    text-align: center;
+    /* Center the title text */
+    font-size: 36px;
+    /* Title font size */
+    margin-bottom: 30px;
+    /* Space below the title */
+}
+
+.myexperience h1:hover {
+    transform: scale(1.05);
+    /* Slight scale on hover */
+    color: #410561;
+}
+
+/* Center the card and its content */
+.myexperience .filterable_cards {
+    display: flex;
+    /* Enables flexbox for cards */
+    justify-content: center;
+    /* Centers cards horizontally */
+    align-items: center;
+    /* Centers card content vertically */
+    width: 100%;
+    /* Ensures cards take full width */
+}
+
+.myexperience .card-body {
+    display: flex;
+    /* Enables flexbox for card body */
+    justify-content: center;
+    /* Centers body content horizontally */
+    align-items: center;
+    /* Centers body content vertically */
+    width: 100%;
+    /* Makes the card responsive */
+}
+
+.myexperience .card {
+    max-width: 600px;
+    /* Maximum width for the card */
+    background-color: #291240;
+    /* Card background color */
+    padding: 20px;
+    /* Padding inside the card */
+    border-radius: 15px;
+    /* Rounded corners */
+    text-align: center;
+    /* Center text in card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Animation on hover */
+}
+
+/* Style for the card title */
+.myexperience .card h6 {
+    font-size: 24px;
+    /* Font size for card title */
+    margin-bottom: 10px;
+    /* Space below card title */
+}
+
+/* Paragraph styling inside the card */
+.myexperience .card p {
+    font-size: 16px;
+    /* Font size for card paragraphs */
+    margin-bottom: 10px;
+    /* Space below paragraphs */
+}
+
+/* Center the image in the card */
+.myexperience .card img {
+    width: 100px;
+    /* Image width */
+    height: 100px;
+    /* Image height */
+    border-radius: 50%;
+    /* Round image corners */
+    margin-bottom: 15px;
+    /* Space below image */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .myexperience h1 {
+        font-size: 28px;
+        /* Adjust title size for small screens */
+    }
+
+    .myexperience .card {
+        max-width: 100%;
+        /* Full width for small screens */
+        padding: 15px;
+        /* Reduce padding */
+    }
+
+    .myexperience .card h6 {
+        font-size: 20px;
+        /* Adjust title size */
+    }
+
+    .myexperience .card p {
+        font-size: 14px;
+        /* Adjust paragraph size */
+    }
+
+    .myexperience .card img {
+        width: 80px;
+        /* Smaller image for mobile screens */
+        height: 80px;
+        /* Smaller image for mobile screens */
+    }
+}

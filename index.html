@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tushar's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="curved-bg">
+        <header>
+            <nav>
+                <div class="left">Tushar's Portfolio</div>
+                <div class="right">
+                    <div class="hamburger" id="hamburger">
+                        &#9776; <!-- This represents the hamburger icon -->
+                    </div>
+                    <ul id="nav-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#myprojects">Projects</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#contact">Contact me</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <script>
+        // JavaScript to toggle the menu on small screens
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
+
+
+
+<main>
+    <section class="section firstsection">
+        <div class="leftsection">
+            <p>Hi, my name is <span class="purple">Tushar</span></p>
+            and I'm a passionate <br>
+            <span id="element"></span>
+        </div>
+        <div class="rightsection">
+            <img src="pics/backgroud.png" alt="Background Image">
+        </div>
+    </section>
+    <section class="section secondsection">
+        <section class="aboutme" id="about">
+            <div class="leftsection">
+                <h1>About</h1>
+                <p>I’m a full stack developer with a strong focus on API development and AI/Machine Learning. I
+                    graduated with a degree in Computer Science and Engineering from CMR Technical Campus,
+                    India.</p>
+                <p>I love building robust web applications and exploring how technology can solve real-world
+                    problems, and I'm always eager to learn more and take on new challenges. I look forward to
+                    sharing ideas and collaborating with you!</p>
+                <!-- Button for checking the resume -->
+                <div class="button-container">
+                    <a href="https://drive.google.com/file/d/1sUKdjJs7KmQIYXwi6K1GjOq-Auw496Za/view?usp=sharing" class="resume-button">Check Resume</a>
+                </div>
+                
+            </div>
+            <div class="rightsection">
+                <img src="pics/me.png" alt="Tushar's Image" class="glow">
+            </div>
+        </section>
+    </section>
+    
+</main>
+
+            <!-- Swiper Section -->
+            <section class="swiper myswiper" id="skills">
+                <h1>My Skills</h1>
+                <div class="swiper-wrapper">
+                    <!-- Card 1 -->
+                    <div class="card swiper-slide">
+                        <div class="card-img">
+                            <img src="pics/web-development.png" alt="Web Development">
+                        </div>
+                        <div class="card_content">
+                            <span class="card_title">Web Developer</span>
+                            <p class="card_text">HTML, CSS, Bootstrap, React, JavaScript</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="card swiper-slide">
+                        <div class="card-img">
+                            <img src="pics/backend.png" alt="Backend Development">
+                        </div>
+                        <div class="card_content">
+                            <span class="card_title">Backend Developer</span>
+                            <p class="card_text">Django, MySQL, MongoDB, NoSQL, REST</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="card swiper-slide">
+                        <div class="card-img">
+                            <img src="pics/software.png" alt="Programming Languages">
+                        </div>
+                        <div class="card_content">
+                            <span class="card_title">Languages</span>
+                            <p class="card_text">C, C++, Java, Python, R</p>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="card swiper-slide">
+                        <div class="card-img">
+                            <img src="pics/technical-support.png" alt="Technical Skills">
+                        </div>
+                        <div class="card_content">
+                            <span class="card_title">Other Skills</span>
+                            <p class="card_text">Git, GitHub, Scratch, Thunkable, AWS, Vercel</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </section>
+            
+            <hr>
+            <section class="personalprojects" id="myprojects">
+                <h1>Projects</h1>
+                <div class="container">
+                    <div class="filter_buttons">
+                        <button class="active" data-name="all">Show All</button>
+                        <button data-name="web-development">Web Development</button>
+                        <button data-name="backend">Backend</button>
+                        <button data-name="AI & ML">AI & ML</button>
+                        <button data-name="other">other/working</button>
+                    </div>
+                    <div class="filterable_cards">
+                        <div class="card-body">
+                            <div class="card" data-name="web-development">
+
+                                <a href="https://your-portfolio-link.com" class="card" data-name="web-development">
+                                
+                                <img src="pics/portfolio.jpg" alt="Personal Portfolio">
+                                <h6 class="card_title">My Personal Portfolio</h6>
+                                <p class="card_text">Built a personal portfolio highlighting my skills, projects,
+                                    experience, and education.</p> 
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card" data-name="backend">
+
+                                <a href="https://github.com/Tusharr43/Personalized-News-Aggregator-" class="card"
+                                    data-name="backend">
+                                
+                                <img src="pics/scraper.jpg" alt="check src path">
+                                <h6 class="card_title">Personalised News Scrapper</h6>
+                                <p class="card_text">Built a Python REST API news scraper that extracts news from sites
+                                    then categorizes it with NLP techniques.</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card" data-name="backend">
+
+                                <a href="https://github.com/Tusharr43/hospital-appoimtment-using-django-" class="card"
+                                    data-name="backend">
+                                
+                                <img src="pics/hospital.jpg" alt="check src path">
+                                <h6 class="card_title">Hospital appointment</h6>
+                                <p class="card_text">Developed hospital appointment system with Django, along with HTML,
+                                    CSS, and JavaScript for the frontend</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card" data-name="AI & ML">
+
+                                <a href="https://github.com/Tusharr43/predict_air_pollution-" class="card"
+                                    data-name="AI & ML">
+                                
+                                <img src="pics/aqi.jpg" alt="check src path">
+                                <h6 class="card_title">predict AQI</h6>
+                                <p class="card_text">An AQI model with Django using ML algorithms,like decision trees,
+                                    regression,knear neighbor and SVM </p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card" data-name="other">
+
+                                <a href="https://github.com/Tusharr43/Instagram-spam-report-bot " class="card"
+                                    data-name="other">
+                                
+                                <img src="pics/insta.jpg" alt="check src path">
+                                <h6 class="card_title">Instagram spam report </h6>
+                                <p class="card_text">An automated model that report for a Instagram ID for Intmax times
+                                </p>
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="education" id="education">
+                <h1>Education</h1>
+                <div class="filterable_cards">
+                    <div class="card-body">
+                        <div class="card">
+                            <img src="pics/crpf.png" alt="Personal Portfolio">
+                            <h6 class="card_title">High School</h6>
+                            <p class="card_text">Completed my high school from CRPF public school in 2018 from CBSE
+                                board </p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card">
+                            <img src="pics/crpf.png" alt="check src path">
+                            <h6 class="card_title">Intermediate school</h6>
+                            <p class="card_text">Completed my high school from CRPF public school in 2018-2020 from CBSE
+                                board</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card">
+                            <img src="pics/cmr.jpg" alt="check src path">
+                            <h6 class="card_title">Bachelor's degree</h6>
+                            <p class="card_text">Graduated with Bachelor of Technology 2020-2024 in computer science and
+                                Engineering (AI and ML)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="myexperience" id="experience">
+                <h1>Experience</h1>
+                <div class="filterable_cards">
+                    <div class="card-body">
+                        <div class="card">
+                            <img src="pics/smart.png" alt="Personal Portfolio">
+                            <h6 class="card_title">Smart Interviews</h6>
+                            <p class="card_text">MENTOR</p>
+                            <p>Facilitated interactive coding workshops and mock interview sessions, boosting students'
+                                confidence and skills for technical assessments
+                                Provided tailored guidance to aspiring software developers, resulting in a 40% increase
+                                in
+                                successful placements at top-tier tech firms.</p>
+                            <p>Sep - Dec 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="contact-container" id="contact">
+                <h1>Contact Us</h1> <!-- Main heading for the section -->
+                <!-- Social Media Links -->
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/tushar-upadhyay-220a17240/" target="_blank" class="social-icon">
+                        <img src="pics/linkdin.png" alt="LinkedIn" />
+                    </a>
+                    <a href="hhttps://github.com/Tusharr43" target="_blank" class="social-icon">
+                        <img src="pics/github.png" alt="GitHub" />
+                    </a>
+                </div>
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+                    <div class="contact-left-title">
+                        <h2>Get in touch</h2>
+                        <hr>
+                        <input type="hidden" name="access_key" value="f8e083cd-7039-46c2-a8ec-519f148df095">
+                        <input type="text" name="name" placeholder="Enter your name" class="contact-inputs" required>
+                        <input type="email" name="email" placeholder="Enter your email" class="contact-inputs" required>
+                        <textarea name="message" placeholder="Your message" class="contact-inputs" required></textarea>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </div>
+                </form>
+            </section>
+            <footer>
+                <ul class="socio-icons">
+                    <li><a href="https://www.instagram.com/yourusername/"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                    <li><a href="https://x.com/home?lang=en"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                    <li><a href="https://www.linkedin.com/in/tushar-upadhyay-220a17240/"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                    <li><a href="https://github.com/Tusharr43"><ion-icon name="logo-github"></ion-icon></a></li>
+                </ul>
+                <ul class="menu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#myprojects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact me</a></li>
+                </ul>
+                <div class="contact-info">
+                    <p>Email: <a href="mailto:sugaxx549@gmail.com">sugaxx549@gmail.com</a></p>
+                    <p>Phone: <a href="tel:+918341782003">+91 8341782003</a></p>        
+                </div>
+            </footer>
+            
+            
+        </main>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Python Developer', 'API Developer', 'Full Stack Developer'],
+            typeSpeed: 100,
+        });
+    </script>
+<!-----  this is for the swiper animation -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".myswiper", {
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 3,
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 50,
+                depth: 150,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            spaceBetween: 20,
+        });
+    </script>
+<!--- for Transitions of card filter -->
+    <script>
+        const filterButtons = document.querySelectorAll(".filter_buttons button");
+        const filterableCards = document.querySelectorAll(".filterable_cards .card");
+
+        const filterCards = e => {
+            // Remove active class from previous button and add it to the clicked button
+            document.querySelector(".active").classList.remove("active");
+            e.target.classList.add("active");
+
+            const filterValue = e.target.dataset.name; // Get the value of the data-name attribute
+
+            filterableCards.forEach(card => {
+                // Check if the card should be displayed
+                if (filterValue === "all" || card.dataset.name === filterValue) {
+                    card.parentElement.style.display = "block"; // Show card
+                } else {
+                    card.parentElement.style.display = "none"; // Hide card
+                }
+            });
+        };
+
+        filterButtons.forEach(button => button.addEventListener("click", filterCards));
+    </script>
+    <!------this is for the transition -->
+<script>
+    const sections = document.querySelectorAll('.swiper,.secondsection,.education,.firstsection');
+
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5 // Change this value to adjust when the fade occurs
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Remove hidden class when the section is in view
+                entry.target.classList.remove('hidden');
+            } else {
+                // Add hidden class when the section is out of view
+                entry.target.classList.add('hidden');
+            }
+        });
+    }, options);
+
+    // Observe each section
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+</script>
+<!--------for icons------>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
